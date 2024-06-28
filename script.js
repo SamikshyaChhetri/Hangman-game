@@ -37,7 +37,7 @@ const a = str.split("");
 wordLength = a.length;
 // console.log(wordLength);
 console.log(a);
-const displayString = "_".repeat(wordLength);
+let displayString = "_".repeat(wordLength);
 
 displayValue.innerHTML = displayString;
 
@@ -53,6 +53,7 @@ document.getElementById("submit").addEventListener("click", () => {
         const splitDisplay = displayString.split("");
         splitDisplay[index] = inputValue;
         const joinDisplay = splitDisplay.join("");
+        displayString = joinDisplay;
         displayValue.innerHTML = joinDisplay;
         console.log(joinDisplay);
       }
