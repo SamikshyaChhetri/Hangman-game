@@ -23,23 +23,30 @@
           class="w-28 h-8 bg-amber-800 absolute border-amber-800 border-2 bottom-1 left-12"
         ></div>
 
-        <div class="flex-col relative top-36 left-64 hidden">
-          <div class="h-32 w-32 rounded-full ml-8 bg-yellow-600"></div>
+        <div class="flex-col relative top-36 left-64 flex">
+          <div
+            class="hidden h-32 w-32 rounded-full ml-8 bg-yellow-600"
+            id="head"
+          ></div>
           <div class="flex absolute top-32">
             <div
-              class="w-24 h-0 border-yellow-600 border-2 -rotate-12 mt-2"
+              class="hidden w-24 h-0 border-yellow-600 border-2 -rotate-12 mt-2"
+              id="leftHand"
             ></div>
-            <div class="h-32 border-yellow-600 border-2"></div>
+            <div class="hidden h-32 border-yellow-600 border-2" id="body"></div>
             <div
-              class="w-24 h-0 border-yellow-600 border-2 rotate-12 mt-2"
+              class="hidden w-24 h-0 border-yellow-600 border-2 rotate-12 mt-2"
+              id="rightHand"
             ></div>
           </div>
           <div class="flex absolute top-72">
             <div
-              class="w-28 h-0 border-yellow-600 border-2 -rotate-45 ml-1"
+              id="leftleg"
+              class="w-28 h-0 border-yellow-600 border-2 -rotate-45 ml-1 hidden"
             ></div>
             <div
-              class="w-28 h-0 border-yellow-600 border-2 rotate-45 -ml-9"
+              id="rightleg"
+              class="w-28 h-0 border-yellow-600 border-2 rotate-45 -ml-9 hidden"
             ></div>
           </div>
         </div>
