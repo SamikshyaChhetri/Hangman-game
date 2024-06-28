@@ -26,50 +26,58 @@
           class="w-28 h-8 bg-amber-800 absolute border-amber-800 border-2 bottom-1 left-12"
         ></div>
 
-        <div class="flex-col relative top-36 left-64 flex">
+        <div class="flex-col relative flex">
           <div
-            class="hidden h-32 w-32 rounded-full ml-8 bg-yellow-600 z-50"
+            class="hidden absolute top-[-34.2em] left-[-26.8em] h-32 w-32 rounded-full bg-yellow-600 z-50"
             id="head"
           ></div>
-          <div class="flex absolute top-32">
+          <div class="flex">
             <div
-              class="hidden w-24 h-0 border-yellow-600 border-2 -rotate-12 mt-2 z-50"
+              class="hidden absolute top-[-26.5em] left-[-29em] w-24 h-0 border-yellow-600 border-2 -rotate-12 mt-2 z-50"
               id="leftHand"
             ></div>
             <div
-              class="hidden h-32 border-yellow-600 border-2 z-50"
+              class="hidden absolute top-[-26.5em] left-[-23.3em] h-32 border-yellow-600 border-2 z-50"
               id="body"
             ></div>
             <div
-              class="hidden w-24 h-0 border-yellow-600 border-2 z-50 rotate-12 mt-2"
+              class="hidden absolute top-[-26.5em] left-[-23.5em] w-24 h-0 border-yellow-600 border-2 z-50 rotate-12 mt-2"
               id="rightHand"
             ></div>
           </div>
-          <div class="flex absolute top-72">
+          <div class="flex">
             <div
               id="leftleg"
-              class="w-28 h-0 z-50 border-yellow-600 border-2 -rotate-45 ml-1 hidden"
+              class="hidden absolute top-[-16.5em] left-[-29em] w-28 h-0 z-50 border-yellow-600 border-2 -rotate-45"
             ></div>
             <div
               id="rightleg"
-              class="w-28 h-0 z-50 border-yellow-600 border-2 rotate-45 -ml-9 hidden"
+              class="hidden absolute top-[-16.5em] left-[-22em] w-28 h-0 z-50 border-yellow-600 border-2 rotate-45 -ml-9"
             ></div>
           </div>
         </div>
       </div>
       <div class="absolute right-72 top-40 flex flex-col gap-1">
-        <label for="text" class="font-bold font-sans">Guess the word :</label>
-        <input
-          type="text"
-          maxlength="1"
-          class="h-12 pl-2 border-2 border-black outline-none text-center text-xl"
-          id="input"
-        />
-        <div class="text-center">
-          <button class="bg-blue-300 p-2 pl-4 pr-4 rounded-md" id="submit">
-            Submit
-          </button>
+        <div class="flex gap-2">
+          <label for="text" class="font-bold font-sans mt-2"
+            >Guess a letter:</label
+          >
+          <input
+            type="text"
+            maxlength="1"
+            class="h-12 w-20 outline-none pl-4 text-xl shadow-lg"
+            id="input"
+          />
+          <div class="text-center">
+            <button
+              class="bg-blue-500 text-white p-1 pl-4 pr-4 rounded-md mt-2 shadow-lg"
+              id="submit"
+            >
+              Submit
+            </button>
+          </div>
         </div>
+
         <div
           class="text-center w-96 h-12 mt-6 flex justify-center p-3 tracking-widest text-2xl"
           id="display"
