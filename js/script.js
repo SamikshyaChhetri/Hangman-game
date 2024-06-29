@@ -30,6 +30,7 @@ const words = [
   "argument",
   "operator",
 ];
+
 const displayValue = document.getElementById("display");
 const random = Math.floor(Math.random() * words.length);
 const str = words[random];
@@ -75,8 +76,18 @@ document.getElementById("submit").addEventListener("click", () => {
         document.getElementById("leftleg").classList.remove("hidden");
       } else if (count == 6) {
         document.getElementById("rightleg").classList.remove("hidden");
+        // toast("You loose");
+
         displayValue.innerHTML = "You lose";
+        setTimeout(() => {
+          const tryAgain = document.getElementById("tryagain");
+          tryAgain.classList.remove("hidden");
+          tryAgain.addEventListener("click", () => {
+            window.location.reload();
+          });
+        }, 1000);
       }
+
       console.log(count);
     }
   }
