@@ -60,6 +60,11 @@ document.getElementById("submit").addEventListener("click", () => {
           console.log(joinDisplay);
         }
       }
+      if (str === displayString) {
+        // setTimeout(() => {
+        displayValue.innerHTML = "You Won";
+        // }, 1000);
+      }
     });
     if (!a.includes(inputValue)) {
       count++;
