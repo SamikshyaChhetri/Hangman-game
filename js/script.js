@@ -42,6 +42,7 @@ let displayString = "_".repeat(wordLength);
 
 displayValue.innerHTML = displayString;
 let count = 0;
+const tryAgain = document.getElementById("tryagain");
 
 document.getElementById("submit").addEventListener("click", () => {
   const inputValue = document.getElementById("input").value;
@@ -61,9 +62,13 @@ document.getElementById("submit").addEventListener("click", () => {
         }
       }
       if (str === displayString) {
-        // setTimeout(() => {
         displayValue.innerHTML = "You Won";
-        // }, 1000);
+        setTimeout(() => {
+          tryAgain.classList.remove("hidden");
+          tryAgain.addEventListener("click", () => {
+            window.location.reload();
+          });
+        }, 1000);
       }
     });
     if (!a.includes(inputValue)) {
@@ -85,7 +90,6 @@ document.getElementById("submit").addEventListener("click", () => {
 
         displayValue.innerHTML = "You lose";
         setTimeout(() => {
-          const tryAgain = document.getElementById("tryagain");
           tryAgain.classList.remove("hidden");
           tryAgain.addEventListener("click", () => {
             window.location.reload();
